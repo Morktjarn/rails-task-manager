@@ -6,9 +6,8 @@ Rails.application.routes.draw do
   # afficher la liste
   get "tasks", to: "tasks#index"
   # afficher la task
+  get "tasks/new", to: "tasks#new"
   get "tasks/:id", to: "tasks#show", as: :task
   # créer une task
-  get "tasks/new", to: "tasks#new"
-  get "tasks/:id", to: "tasks#show"
   post "tasks", to: "tasks#create"
 end
